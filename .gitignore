@@ -1,0 +1,44 @@
+# OpenClaw 多端同步 - Git 忽略规则
+
+# 依赖目录（太大，不同机器重新 npm install）
+node_modules/
+
+# 日志和临时文件
+logs/
+*.log
+*.tmp
+tmp/
+
+# SQLite 数据库（多设备写入会冲突，单独备份）
+# memory/main.sqlite
+
+# 敏感信息（API keys、tokens）
+.env
+.env.local
+*.key
+*.pem
+secrets/
+
+# 会话临时文件
+sessions/*.tmp
+sessions/*.lock
+
+# 缓存
+cache/
+.cache/
+*.cache
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 备份文件
+*.bak
+*.backup
+backups/
+
+# 编译缓存
+compile-cache/
+
+# 设备特定配置
+devices/
